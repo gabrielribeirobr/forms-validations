@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Validação de formulário</title>
+</head>
+<body>
+    <div class="container">
+        <form id="meuFormulario" novalidate>
+            <label for="licenca">Você possui licença de motorista?</label>
+            <select id="licenca" name="licenca" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <span class="error" id="erroLicenca">Este campo é obrigatório.</span>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required min="18">
+            <span class="error" id="erroIdade">Informe uma idade válida.</span>
+
+            <label for="fruta">Qual a sua fruta preferida?</label>
+            <input type="text" id="fruta" name="fruta" required>
+            <span class="error" id="erroFruta">Este campo é obrigatório.</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="erroEmail">Insira um e-mail válido.</span>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <span class="error" id="erroMensagem">Este campo é obrigatório.</span>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
